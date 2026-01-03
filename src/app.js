@@ -16,6 +16,19 @@ const performanceConfig = require("../performance-config");
 const app = express();
 
 /**
+ * Log HTTP protocol version for debugging/learning purposes
+ */
+app.use((req, res, next) => {
+  const protocol = req.httpVersion || 'unknown';
+  const protocolName = protocol === '2.0' ? 'HTTP/2' : 
+                       protocol === '1.1' ? 'HTTP/1.1' : 
+                       protocol === '1.0' ? 'HTTP/1.0' : 
+                       protocol;
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.path} - Protocol: ${protocolName} (${protocol})`);
+  next();
+});
+
+/**
  * Simulating real-world delays for server processing duration and network
  * latency.
  */
