@@ -106,20 +106,4 @@ document.body.appendChild(el);
 
 
 
-<picture class="illustration">
-  <source media="(max-width: 720px)"
-    srcset="/hero-mobile.png?width=360 360w,
-            /hero-mobile.png?width=720 720w,
-            /hero-mobile.png?width=1440 1440w" />
-  <source media="(min-width: 721px)"
-    srcset="/hero-desktop.png?width=720 720w,
-            /hero-desktop.png?width=1440 1440w,
-            /hero-desktop.png?width=2800 2800w">
-    <img loading="lazy" src="/hero-desktop.png?width=2800"
-      alt="Developer Stickers Online"
-      fetchpriorty="high"
-      height="1200" width="2800" />
-</picture>
-
-
 
