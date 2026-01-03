@@ -115,7 +115,7 @@ document.body.appendChild(el);
     srcset="/hero-desktop.png?width=720 720w,
             /hero-desktop.png?width=1440 1440w,
             /hero-desktop.png?width=2800 2800w">
-    <img src="/hero-desktop.png?width=2800"
+    <img loading="lazy" src="/hero-desktop.png?width=2800"
       alt="Developer Stickers Online"
       fetchpriorty="high"
       height="1200" width="2800" />
